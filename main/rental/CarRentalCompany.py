@@ -1,6 +1,8 @@
+import threading
 class CarRentalCompany:
     def __init__(self):
         self.cars = []
+        self.lock = threading.Lock()
 
     def add_car(self, car):
         self.cars.append(car)

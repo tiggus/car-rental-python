@@ -25,7 +25,7 @@ class CarRentalTest(unittest.TestCase):
         car_rental_company.add_car(self.CAR3)
         car_rental_company.add_car(self.CAR4)
 
-        criteria = Criteria()
+        criteria = Criteria(car)
         cars_available = car_rental_company.matching_cars(criteria)
 
         self.assertGreater(len(cars_available), 1)
